@@ -1,8 +1,8 @@
 {
-  "name": "goit-react-hw-7-phonebook",
+  "name": "goit-react-hw-8-phonebook",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Valeriia789.github.io/goit-react-hw-7-phonebook",
+  "homepage": "https://Valeriia789.github.io/goit-react-hw-8-phonebook",
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
@@ -13,7 +13,6 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "clsx": "^1.2.1",
-    "gh-pages": "^4.0.0",
     "nanoid": "^4.0.0",
     "npm": "^8.17.0",
     "prop-types": "^15.8.1",
@@ -54,5 +53,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
