@@ -1,7 +1,8 @@
 import ReactDOM from 'react-dom/client';
 import React from 'react';
 import { Provider } from 'react-redux';
-import { App } from 'components/App';
+import { BrowserRouter } from 'react-router-dom';
+import { App } from 'App';
 import { store } from './redux/store';
 
 import { ThemeProvider } from '@emotion/react';
@@ -9,10 +10,12 @@ import { theme } from './theme';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <Provider store={store}>
-        <ThemeProvider theme={theme}>
+    <Provider store={store}>
+      <ThemeProvider theme={theme}>
+        <BrowserRouter basename="/goit-react-hw-8-phonebook">
           <App />
-        </ThemeProvider>
-      </Provider>
+        </BrowserRouter>
+      </ThemeProvider>
+    </Provider>
   </React.StrictMode>
 );
