@@ -30,15 +30,20 @@ export const RegisterForm = () => {
       <RegForm autoComplete="off">
         <RegisterLabel>
           Username
-          <Field type="text" name="name" />
+          <Field type="text" name="name" placeholder="Ivan Karavan" />
         </RegisterLabel>
         <RegisterLabel>
           Email
-          <Field type="email" name="email" />
+          <Field type="email" name="email" placeholder="IvanKaravan@ukr.net" />
         </RegisterLabel>
         <RegisterLabel>
           Password
-          <Field type="password" name="password" autoComplete="on" />
+          <Field
+            type="password"
+            name="password"
+            autoComplete="on"
+            placeholder="PtnPnh2022"
+          />
         </RegisterLabel>
         <button type="submit">Register</button>
       </RegForm>

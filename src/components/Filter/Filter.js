@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
-import { findContact } from '../../redux/filterSlice';
+import { findContact } from '../../redux/contacts/filterSlice';
 
 import { Input } from '../commonStyles/Input.styled';
 
@@ -14,9 +14,9 @@ export const Filter = () => {
   return (
     <Input
       value={filter}
-      name='filter'
-      type='text'
-      placeholder='Find contact'
+      name="filter"
+      type="text"
+      placeholder="Find contact"
       onChange={onUpdateFilter}
     />
   );

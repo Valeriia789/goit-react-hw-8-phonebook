@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchContacts } from '../../redux/operations';
-import { selectContacts, selectFilter } from '../../redux/selectors';
+import { fetchContacts } from '../../redux/contacts/operations';
+import { selectContacts, selectFilter } from '../../redux/contacts/selectors';
 import { ContactListItem } from '../ContactListItem/ContactListItem';
 
 export const ContactsList = () => {
@@ -30,7 +30,7 @@ export const ContactsList = () => {
     <div>
       {isLoading && <b>Loading contacts...</b>}
       {error && <b>{error.message}</b>}
-      
+
       <section>
         <h2>Contacts</h2>
 
