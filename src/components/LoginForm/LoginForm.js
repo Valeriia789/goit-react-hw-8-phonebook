@@ -3,7 +3,7 @@ import { logIn } from 'redux/auth/operations';
 import { Formik, Field } from 'formik';
 import { LogForm, LoginLabel } from './loginFormStyles';
 
-export const LoginForm = () => {
+const LoginForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, actions) => {
@@ -38,3 +38,5 @@ export const LoginForm = () => {
     </Formik>
   );
 };
+
+export default LoginForm;
