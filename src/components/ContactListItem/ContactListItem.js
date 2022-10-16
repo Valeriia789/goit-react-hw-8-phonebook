@@ -9,7 +9,7 @@ export const ContactListItem = ({ contact }) => {
   return (
     <ListItem>
       <p>
-        {contact.name} : {contact.phone}
+        {contact.name} : {contact.number}
       </p>
       <DeleteButton type="button" onClick={handleDelete}>
         Delete

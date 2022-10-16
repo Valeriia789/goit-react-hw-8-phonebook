@@ -15,6 +15,8 @@ export const ContactsEditorForm = () => {
     const name = form.elements.name.value;
     const number = form.elements.number.value;
 
+    console.log(name, number);
+
     if (namesArray.find(myContact => myContact === name)) {
       alert(`${name} is already in contacts`);
       return;
