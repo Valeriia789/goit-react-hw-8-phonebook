@@ -4,7 +4,7 @@ export const theme = {
     normal: '1px solid',
     medium: '2px solid',
     dotted: '3px dotted',
-    decorBold: '10px solid'
+    decorBold: '10px solid',
   },
 
   borderStyles: {},
@@ -17,14 +17,14 @@ export const theme = {
     backgroundAccent: 'gold',
     secondary: '#fcba30',
     warning: 'red',
-    backgroundHover: 'whitesmoke'
+    backgroundHover: 'whitesmoke',
   },
 
   fonts: {
     body: 'system-ui, sans-serif',
     heading: 'system-ui, sans-serif',
     monospace: 'Menlo, monospace',
-    roboto: 'Roboto, sans-serif'
+    roboto: 'Roboto, sans-serif',
   },
 
   fontSizes: [10, 12, 14, 16, 18, 20, 24, 32, 48, 64],
@@ -32,18 +32,18 @@ export const theme = {
   fontWeights: {
     body: 400,
     heading: 700,
-    bold: 900
+    bold: 900,
   },
 
   letterSpacings: {
     s: '1px',
     m: '2px',
-    l: '3px'
+    l: '3px',
   },
 
   lineHeights: {
     body: 1.5,
-    heading: 1.125
+    heading: 1.125,
   },
 
   opacities: {},
@@ -53,13 +53,12 @@ export const theme = {
     sm: '4px',
     md: '8px',
     lg: '16px',
-    round: '50%'
+    round: '50%',
   },
 
   shadows: {
     text: '1px 1px 2px black, 1px 1px 2px black',
-    box:
-      '2px -2px 5px 0 rgba(0, 0, 0, 0.1), -2px -2px 5px 0 rgba(0, 0, 0, 0.1), 2px 2px 5px 0 rgba(0, 0, 0, 0.1), -2px 2px 5px 0 rgba(0, 0, 0, 0.1)'
+    box: '2px -2px 5px 0 rgba(0, 0, 0, 0.1), -2px -2px 5px 0 rgba(0, 0, 0, 0.1), 2px 2px 5px 0 rgba(0, 0, 0, 0.1), -2px 2px 5px 0 rgba(0, 0, 0, 0.1)',
   },
 
   sizes: {
@@ -72,12 +71,12 @@ export const theme = {
     xxl: '400px',
     third: '30%',
     halfSize: '50%',
-    parentSize: '100%'
+    parentSize: '100%',
   },
 
   space: [0, 2, 4, 8, 12, 16, 20, 32, 40, 50, 64],
 
   transitions: {},
 
-  zIndices: {}
-}
+  zIndices: {},
+};
