@@ -13,14 +13,14 @@ export const ContactsEditorForm = () => {
     event.preventDefault();
     const form = event.currentTarget;
     const name = form.elements.name.value;
-    const phone = form.elements.phone.value;
+    const number = form.elements.number.value;
 
     if (namesArray.find(myContact => myContact === name)) {
       alert(`${name} is already in contacts`);
       return;
     }
 
-    dispatch(addContact({ name, phone }));
+    dispatch(addContact({ name, number }));
     form.reset();
   };
 
@@ -46,8 +46,8 @@ export const ContactsEditorForm = () => {
           Phone number
           <Input
             type="tel"
-            id="phone"
-            name="phone"
+            id="number"
+            name="number"
             placeholder="+38 000 00 00"
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"

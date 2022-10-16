@@ -6,11 +6,11 @@ import { Filter } from '../components/Filter/Filter';
 import { ContactsList } from '../components/ContactList/ContactsList';
 
 import { fetchContacts } from '../redux/contacts/operations';
-import { selectLoading } from '../redux/contacts/selectors';
+import { selectIsLoading } from '../redux/contacts/selectors';
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector(selectLoading);
+  const isLoading = useSelector(selectIsLoading);
 
   useEffect(() => {
     dispatch(fetchContacts());

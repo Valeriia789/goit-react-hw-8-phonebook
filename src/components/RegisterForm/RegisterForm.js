@@ -1,52 +1,38 @@
 import { useDispatch } from 'react-redux';
-import { register } from 'redux/auth/operations';
-import { Formik, Field } from 'formik';
-import { RegForm, RegisterLabel } from './RegisterFormStyles';
+import { register } from '../../redux/auth/operations';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
 
-  const handleSubmit = (values, actions) => {
-    console.log(values);
-    const form = values;
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
     dispatch(
       register({
-        name: form.name,
-        email: form.email,
-        password: form.password,
+        name: form.elements.name.value,
+        email: form.elements.email.value,
+        password: form.elements.password.value,
       })
     );
-    actions.resetForm();
-  };
-
-  const initialValues = {
-    email: '',
-    name: '',
-    password: '',
+    form.reset();
   };
 
   return (
-    <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-      <RegForm autoComplete="off">
-        <RegisterLabel>
-          Username
-          <Field type="text" name="name" placeholder="Ivan Karavan" />
-        </RegisterLabel>
-        <RegisterLabel>
-          Email
-          <Field type="email" name="email" placeholder="IvanKaravan@ukr.net" />
-        </RegisterLabel>
-        <RegisterLabel>
-          Password
-          <Field
-            type="password"
-            name="password"
-            autoComplete="on"
-            placeholder="PtnPnh2022"
-          />
-        </RegisterLabel>
-        <button type="submit">Register</button>
-      </RegForm>
-    </Formik>
+    <form onSubmit={handleSubmit} autoComplete="off">
+      <label>
+        Username
+        <input type="text" name="name" placeholder="Ivan Karavan" />
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" placeholder="IvanKaravan@ukr.net" />
+      </label>
+      <label>
+        Password
+        <input type="password" name="password" placeholder="PtnPnh2022" />
+      </label>
+      <button type="submit">Register</button>
+    </form>
   );
 };
