@@ -35,7 +35,7 @@ export const ContactsList = () => {
         <h2>Contacts</h2>
 
         <ul>
-          {Array.isArray(filteredContacts)
+          {filteredContacts
             ? filteredContacts.map(contact => {
                 return (
                   <ContactListItem
