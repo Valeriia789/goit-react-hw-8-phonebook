@@ -1,41 +1,33 @@
 import { useDispatch } from 'react-redux';
-import { logIn } from 'redux/auth/operations';
-import { Formik, Field } from 'formik';
-import { LogForm, LoginLabel } from './LoginFormStyles';
+import { logIn } from '../../redux/auth/operations';
 
 const LoginForm = () => {
   const dispatch = useDispatch();
 
-  const handleSubmit = (values, actions) => {
-    const form = values;
+  const handleSubmit = e => {
+    e.preventDefault();
+    const form = e.currentTarget;
     dispatch(
       logIn({
-        email: form.email,
-        password: form.password,
+        email: form.elements.email.value,
+        password: form.elements.password.value,
       })
     );
-    actions.resetForm();
-  };
-
-  const initialValues = {
-    email: '',
-    name: '',
+    form.reset();
   };
 
   return (
-    <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-      <LogForm autoComplete="off">
-        <LoginLabel>
-          Email
-          <Field type="email" name="email" />
-        </LoginLabel>
-        <LoginLabel>
-          Password
-          <Field type="password" name="password" autoComplete="on" />
-        </LoginLabel>
-        <button type="submit">Log In</button>
-      </LogForm>
-    </Formik>
+    <form onSubmit={handleSubmit} autoComplete="off">
+      <label>
+        Email
+        <input type="email" name="email" />
+      </label>
+      <label>
+        Password
+        <input type="password" name="password" />
+      </label>
+      <button type="submit">Log In</button>
+    </form>
   );
 };
 
