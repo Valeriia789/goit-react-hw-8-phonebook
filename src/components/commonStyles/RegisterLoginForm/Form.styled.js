@@ -4,11 +4,15 @@ export const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 400px;
+  max-width: 350px;
 
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   padding: 40px;
+
+  background-color: lightgrey;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 5px;
 `;
 
 export const Form = styled.form`
@@ -51,7 +55,7 @@ export const Button = styled.button`
   padding: ${props => props.theme.space[4]}px;
   border-color: ${props => props.theme.colors.accent};
   border-radius: ${props => props.theme.radii.sm};
-  background-color: rgba(235, 200, 50, 0.7);
+  background-color: rgba(235, 200, 50, 0.5);
   font-size: ${props => props.theme.fontSizes[3]}px;
 
   transition: 0.3s all linear;
