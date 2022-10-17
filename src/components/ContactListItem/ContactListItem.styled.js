@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 
 export const ListItem = styled.li`
   display: flex;
@@ -23,12 +23,12 @@ export const ListItem = styled.li`
   &:hover {
     background-color: ${props => props.theme.colors.backgroundHover};
   }
-`
+`;
 
 export const DeleteButton = styled.button`
   cursor: pointer;
   color: ${props => props.theme.colors.warning};
-  background-color: ${props => props.theme.colors.primary};
+  background-color: ${props => props.theme.colors.fill};
 
   border-radius: ${props => props.theme.radii.sm};
   border-color: ${props => props.theme.colors.warning};
@@ -36,4 +36,4 @@ export const DeleteButton = styled.button`
   &:hover {
     box-shadow: ${props => props.theme.shadows.box};
   }
-`
+`;

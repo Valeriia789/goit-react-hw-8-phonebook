@@ -18,6 +18,7 @@ export const theme = {
     secondary: '#fcba30',
     warning: 'red',
     backgroundHover: 'whitesmoke',
+    fill: 'aliceblue',
   },
 
   fonts: {
